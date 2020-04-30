@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Password Generator</title>
+  </head>
+  <body>
+    <div class="container mb-0 text-center">
+        <h1>Password Generator</h1>
+        <br>
+        <div class="row">
+            <div class="col-sm">
+
+            </div>
+            <div class="col-sm text-left">
+                <form action="{% url 'password' %}">
+                    <select name="length" id="length">
+                        <option value="6">6</option>
+                        <option value="6">8</option>
+                        <option value="8">8</option>
+                        <option value="10">10</option>
+                        <option value="12" selected="selected">12</option>
+                        <option value="14">14</option>
+                    </select> Charactor length
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="uppercase">&nbsp;&nbsp;uppercase<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="numbers">&nbsp;&nbsp;Numbers<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="special">&nbsp;&nbsp;Special Charactors<br>
+                    <br>
+                    <input type="submit" value="Generate Password" class="btn btn-primary">
+                </form>
+            </div>
+            <div class="col-sm">
+
+            </div>
+          </div>
+        <br>
+        <br>
+        <h3><a href="{% url 'about' %}" class="btn btn-warning">About</a></h3>
+        </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
